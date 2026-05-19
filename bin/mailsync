@@ -29,7 +29,7 @@ tty -s || (echo "dummy" | gpg --sign --batch --pinentry-mode error -o /dev/null 
 
 export GPG_TTY="$(tty)"
 
-[ -n "$MBSYNCRC" ] && alias mbsync="mbsync -c $MBSYNCRC" || MBSYNCRC="$HOME/.mbsyncrc"
+[ -n "$MBSYNCRC" ] && alias mbsync="mbsync -c $MBSYNCRC" || MBSYNCRC="$HOME/.config/.mbsyncrc"
 [ -n "$MPOPRC" ] || MPOPRC="$HOME/.config/mpop/config"
 
 lastrun="${XDG_CONFIG_HOME:-$HOME/.config}/mutt/.mailsynclastrun"
